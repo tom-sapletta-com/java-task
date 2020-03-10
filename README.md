@@ -57,4 +57,11 @@ To push to a Docker registry you use the build goal, instead of dockerBuild
     maven_docker_build.bat
     
 After Creting the docker, use the  Start / Stop scripts below   
-    
+
+# Tests
+
+## Hello
+http://localhost:8080/
+
+## All data Users
+http://localhost:8080/users/all

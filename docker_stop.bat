@@ -1,4 +1,4 @@
 ::docker-compose kill
 ::docker-compose stop
-docker stop adoring_robinson
+docker stop friendly_mendeleev
 docker ps

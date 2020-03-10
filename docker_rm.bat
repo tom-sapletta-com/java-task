@@ -1,3 +1,3 @@
 ::docker system prune -a -f
-docker rm adoring_robinson
+docker rm friendly_mendeleev
 docker ps

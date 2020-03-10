@@ -9,24 +9,28 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("users")
 public class UsersController {
 
     @Autowired
     private UserJpaRepository userJpaRepository;
 
-    @GetMapping(value="/all")
+    @GetMapping(value = "/")
+    public @ResponseBody String hello() {
+        return "Hello";
+    }
+
+    @GetMapping(value="/users/all")
     public List<Users> findAll() {
         return userJpaRepository.findAll();
     }
 
-    @GetMapping(value="/{lastName}")
-    public Users findByName(@PathVariable final String lastName){
+    @GetMapping(value = "/users/{lastName}")
+    public Users findByName(@PathVariable final String lastName) {
         return userJpaRepository.findByLastName(lastName);
     }
 
-    @PostMapping(value="/load")
-    public Users load(@RequestBody final Users users){
+    @PostMapping(value = "/users/load")
+    public Users load(@RequestBody final Users users) {
         userJpaRepository.save(users);
         return userJpaRepository.findByLastName(users.getLastName());
     }
