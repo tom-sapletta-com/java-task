@@ -1,3 +1,5 @@
+https://github.com/tom-sapletta-com/java-task
+
 # java-task
 + Java 8+
 + Spring boot
@@ -29,3 +31,30 @@
 https://start.spring.io/
 
 ![spring-boot.png](docs/spring-boot.png)
+
+## Scripts to manage the project
+
+### Docker
+
+Create / Remove
+
+    docker_build.bat
+    docker_rm.bat
+
+Start / Stop
+    
+    docker_start.bat
+    docker_stop.bat
+    
+## Maven     
+
+run the application without the Docker container on localhost:8080/
+
+    maven_jar.bat
+    
+To push to a Docker registry you use the build goal, instead of dockerBuild    
+
+    maven_docker_build.bat
+    
+After Creting the docker, use the  Start / Stop scripts below   
+    
