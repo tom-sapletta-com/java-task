@@ -60,6 +60,9 @@ After Creting the docker, use the  Start / Stop scripts below
 
 # Tests
 
+## Endpoint
+http://localhost:8080/actuator/
+
 ## Hello
 http://localhost:8080/
 
